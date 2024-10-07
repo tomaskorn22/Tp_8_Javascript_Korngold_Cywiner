@@ -6,14 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-
+    <!--Nombres 'a' -->
     <h1>Filtrar nombres que comienzan con 'A'</h1>
     <label for="nombres">Introduce una lista de nombres (separados por comas):</label>
     <input type="text" id="nombres"/>
     <button onclick="filtrarNombres()">Filtrar</button>
     
     <h2>Nombres filtrados:</h2>
-    
+    <!--Remplzar palabras -->
     <h1>Reemplazar palabras en una cadena</h1>
     
     <label for="cadena">Introduce una cadena de texto:</label>
@@ -28,7 +28,38 @@
     <button onclick="reemplazarPalabra()">Reemplazar</button>
     
     <h2>Resultado:</h2>
+    
+    <!--Cortar texto -->
+    <h1>Obtener los primeros caracteres de una cadena</h1>
+    
+    <label for="cadena">Introduce una cadena de texto:</label>
+    <input type="text" id="cadena" /><br>
+    
+    <label for="numero">Introduce un número:</label>
+    <input type="number" id="numero" /><br>
+
+    <button onclick="obtenerPrimerosCaracteres()">Mostrar</button>
+    <!--Sring con separador -->
+    <h1>Unir elementos de una lista</h1>
+
+    <label for="lista">Introduce una lista de elementos separados por coma:</label>
+    <input type="text" id="lista" /><br>
+
+    <button onclick="mostrarLista()">Mostrar Lista</button>
+    <!--Calcular recaudacion -->
+    <h1>Calcular recaudación total de pedidos</h1>
+
+    <label for="pedidos">Introduce los pedidos con sus totales (formato "nombre:total"):</label>
+    <input type="text" id="pedidos" /><br>
+
+    <button onclick="calcularRecaudacion()">Calcular Recaudación</button>
+
+    <h2>Recaudación Total:</h2>
+
+    <h2>Resultado:</h2>
+    
     <div id="resultado"></div>
+
 
     <script src = "js/ejercicios.js" > </script>
     <script src = "js/utils.js" > </script>

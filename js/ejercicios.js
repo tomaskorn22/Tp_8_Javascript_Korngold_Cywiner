@@ -121,7 +121,7 @@ function reemplazarPalabra() {
     
     document.getElementById("resultado").innerHTML = cadenaModificada;
 }
-//
+//cortar texto
 function obtenerPrimerosCaracteres() {
     
     let cadena = document.getElementById("cadena").value;
@@ -134,4 +134,24 @@ function obtenerPrimerosCaracteres() {
     document.getElementById("resultado").innerHTML = cadenaCortada;
 }
 
+//String con separador
+function mostrarLista() {
+    let lista = document.getElementById("lista").value;
+    let arrayElementos = lista.split(',').map(elemento => elemento.trim());
+    let resultado = arrayElementos.join(' - ');
+    document.getElementById("resultado").innerHTML = resultado;
+}
+
+//
+function calcularRecaudacion() {
+    let pedidos = document.getElementById("pedidos").value;
+
+    let arrayPedidos = pedidos.split(',');
+    let recaudacionTotal = 0;
+    arrayPedidos.forEach(pedido => {
+        let [nombre, total] = pedido.split(':').map(elemento => elemento.trim());
+        recaudacionTotal += parseFloat(total);
+    });
+    document.getElementById("resultado").innerHTML = `Total: $${recaudacionTotal.toFixed(2)}`;
+}
 
