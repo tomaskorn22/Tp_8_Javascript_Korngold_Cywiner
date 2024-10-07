@@ -25,13 +25,11 @@ const edad = calcularEdad(fechaNacimiento);
 
 console.log(`Hola ${nombre}, tienes ${edad} años!`);
 //COMPARANDO DATOS Y TIPOS
-let num1 = 0
-let num2 = 0
-
-num1= 
-
-
-
+let num1
+let num2
+num1 = (10 =='10') 
+num2 = (10 ==='10') 
+console.log("el numero 10.6 es de tipo " + typeof(10.6))
 
 //DOBLE ELEMENTOS
 function duplicarNumeros(array) {
@@ -105,8 +103,35 @@ const ciudad = {
 };
 
 for (const clave in ciudad) {
-    if (ciudad.hasOwnProperty(clave)) {
+    if (ciudad.hasOwnProperty(clave)) 
+    {
         console.log(`Clave: ${clave}, Valor: ${ciudad[clave]}`);
     }
 }
+//Remplazar Palabras
+function reemplazarPalabra() {
+    
+    let cadena = document.getElementById("cadena").value;
+    let palabra = document.getElementById("palabra").value;
+    let reemplazo = document.getElementById("reemplazo").value;
+
+    
+    let cadenaModificada = cadena.replaceAll(palabra, reemplazo);
+
+    
+    document.getElementById("resultado").innerHTML = cadenaModificada;
+}
+//
+function obtenerPrimerosCaracteres() {
+    
+    let cadena = document.getElementById("cadena").value;
+    let numero = parseInt(document.getElementById("numero").value);
+    if (numero > cadena.length)
+     {
+        numero = cadena.length;
+    }
+    let cadenaCortada = cadena.substring(0, numero);
+    document.getElementById("resultado").innerHTML = cadenaCortada;
+}
+
 
